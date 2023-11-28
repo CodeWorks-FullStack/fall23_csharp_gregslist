@@ -23,7 +23,7 @@ public class CarsRepository
 
     // Query takes in a type to return, and it accepts an argument which is our string of sql
 
-    // Query returns an IEnumerable, but we want to a List so we call the .ToList() method
+    // Query returns an IEnumerable<Car>, but we want a List<Car> so we call the .ToList() method
     List<Car> cars = _db.Query<Car>(sql).ToList();
     return cars;
   }
